@@ -1,4 +1,9 @@
-function countCategory() {
-  const categories = document.querySelector("categories");
-  console.log(categories);
-}
+const categoriesEl = document.querySelectorAll(".item");
+
+console.log(`Number of categories: ${categoriesEl.length}`);
+categoriesEl.forEach((item) =>
+  console.log(`
+  Category: ${item.firstElementChild.textContent} 
+  Elements: ${item.querySelectorAll("li").length}
+  `)
+);
